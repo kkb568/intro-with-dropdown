@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Epilogue">
+  <script type="text/javascript" src="index.js"></script>
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+  <header>
+    <img class="logo" src="images/logo.svg" alt="Snap company logo">
+    <nav>
+      <div class="left_nav">
+        <button onclick="showSubMenu('features_menu', 'feature_arrow')">Features
+          <img id="feature_arrow" src="images/icon-arrow-down.svg">
+        </button>
+        <button onclick="showSubMenu('company_menu', 'company_arrow')">Company
+          <img id="company_arrow" src="images/icon-arrow-down.svg">
+        </button>
+        <button>Careers</button>
+        <button>About</button>
+      </div>
+      <div class="right_nav">
+        <button>Login</button>
+        <button>Register</button>
+      </div>
+    </nav>
+    <img class="menu" src="images/icon-menu.svg" onclick="openSub_Menu()">
+  </header>
+  <!-- For mobile menu.  -->
+  <div class="sub_menu" id="sub_menu">
+    <div class="sub_menuContent">
+      <img src="images/icon-close-menu.svg" onclick="closeSub_Menu()">
+      <div class="top_buttons">
+        <button class="accordion" onclick="showAccordionContent('accordionContentFeatures', 'featureAccordion_arrow')">Features
+          <img id="featureAccordion_arrow" src="images/icon-arrow-down.svg">
+        </button>
+        <div class="accordionContent" id="accordionContentFeatures">
+          <button>
+            <img src="images/icon-todo.svg"> Todo List
+          </button>
+          <button>
+            <img src="images/icon-calendar.svg"> Calendar
+          </button>
+          <button>
+            <img src="images/icon-reminders.svg"> Reminders
+          </button>
+          <button>
+            <img src="images/icon-planning.svg"> Planning
+          </button>
+        </div>
+        <button class="accordion" onclick="showAccordionContent('accordionContentCompany', 'companyAccordion_arrow')">Company
+          <img id="companyAccordion_arrow" src="images/icon-arrow-down.svg">
+        </button>
+        <div class="accordionContent" id="accordionContentCompany">
+          <button>History</button>
+          <button>Our Team</button>
+          <button>Blog</button>
+        </div>
+        <button>Careers</button>
+        <button>About</button>
+      </div>
+      <div class="bottom_buttons">
+        <button>Login</button>
+        <button>Register</button>
+      </div>
+    </div>
+  </div>
+  <main>
+    <!-- Dropdown content for features button (desktop-view). -->
+    <div class="features_content" id="features_menu">
+      <button>
+        <img src="images/icon-todo.svg"> Todo List
+      </button><br>
+      <button>
+        <img src="images/icon-calendar.svg"> Calendar
+      </button><br>
+      <button>
+        <img src="images/icon-reminders.svg"> Reminders
+      </button><br>
+      <button>
+        <img src="images/icon-planning.svg"> Planning
+      </button><br>
+    </div>
+    <!-- Dropdown content for company button (desktop-view). -->
+    <div class="company_content" id="company_menu">
+      <button>History</button><br>
+      <button>Our Team</button><br>
+      <button>Blog</button><br>
+    </div>
+    <div class="content">
+      <div class="left-content">
+        <h1>Make remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes, 
+           create team rituals, and watch productivity soar.</p>
+        <button>Learn more</button>
+        <div class="clients">
+          <img src="images/client-databiz.svg" alt="Logo of Databiz company">
+          <img src="images/client-audiophile.svg" alt="Logo of Audiophile company">
+          <img src="images/client-meet.svg" alt="Logo of Meet company">
+          <img src="images/client-maker.svg" alt="Logo of Maker company">
+        </div><br><br>
+      </div>
+      <div class="right-content">
+        <picture>
+          <source media="(min-width: 600px)" srcset="images/image-hero-desktop.png">
+          <img src="images/image-hero-mobile.png" alt="Illustration photo">
+        </picture>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

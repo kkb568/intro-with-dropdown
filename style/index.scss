@@ -1,0 +1,313 @@
+$medium-gray: rgb(105, 105, 105);
+$almost-black: rgb(20, 20, 20);
+
+@font-face {
+    font-family: epilogue_bold;
+    src: url(Epilogue-Bold.ttf);
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Epilogue';
+}
+
+header {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    nav {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        margin-top: -1.2%;
+        
+        button {
+            background-color: transparent;
+            border: none;
+            padding: 12px;
+            margin-left: 5px;
+            color: $medium-gray;
+            cursor: pointer;
+            transition: 0.4s ease;
+            font-family: 'Epilogue';
+        }
+
+        button:hover{
+            color: $almost-black;
+        }
+    }
+}
+
+.menu, .sub_menu {
+    display: none;
+}
+
+.right_nav {
+    :nth-child(2) {
+        border: 2px solid $medium-gray;
+        border-radius: 10px;
+    }
+
+    :nth-child(2):hover {
+        border: 2px solid $almost-black;
+    }
+}
+
+.features_content {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+    padding: 10px 25px 10px 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.5s ease;
+    z-index: 1;
+
+    button {
+        padding: 5px;
+        margin-bottom: 5px;
+        background-color: transparent;
+        border: none;
+        color: $medium-gray;
+        cursor: pointer;
+
+        img{
+            margin-right: 5px;
+        }
+    }
+
+    button:hover{
+        color: $almost-black;
+    }
+}
+
+.company_content {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+    padding: 10px 25px 10px 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.5s ease;
+    z-index: 1;
+
+    button {
+        padding: 5px;
+        margin-bottom: 5px;
+        background-color: transparent;
+        border: none;
+        color: $medium-gray;
+        cursor: pointer;
+    }
+
+    button:hover{
+        color: $almost-black;
+    }
+}
+
+.content {
+    position: absolute;
+    top: 15%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-content {
+    padding: 4% 0% 0% 7%;
+
+    h1 {
+        font-family: epilogue_bold;
+        font-size: 50px;
+        color: $almost-black;
+    }
+
+    p {
+        font-size: 18px;
+        color:$medium-gray;
+    }
+
+    button {
+        padding: 20px;
+        background-color: $almost-black;
+        border-color: transparent;
+        border-radius: 15px;
+        color: rgb(250, 250, 250);
+        margin-top: 5%;
+        margin-bottom: 15%;
+        font-family: epilogue_bold;
+        cursor: pointer;
+        transition: 0.4s ease;
+    }
+
+    button:hover {
+        color: $almost-black;
+        background-color: white;
+        border-color: $almost-black;
+        font-family: epilogue_bold;
+    }
+}
+
+.clients {
+    img {
+        margin-right: 5%;
+    }
+}
+
+.right-content {
+    img {
+        width: auto;
+        height: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width:600px) {
+    body {
+        overflow-y: visible;
+    }
+
+    header {
+        grid-template-columns: 5fr 1fr;
+        
+        nav {
+            display: none;
+        }
+    }
+
+    .logo {
+        margin-left: 5%;
+    }
+
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .sub_menu {
+        display: block;
+        z-index: 1;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(20, 20, 20, 0.7);
+        overflow: hidden;
+        transition: 0.5s ease;
+    }
+
+    .sub_menuContent {
+        width: 50%;
+        height: 100%;
+        background-color: white;
+        float:right;
+        padding: 4%;
+
+        img {
+            float: right;
+            cursor: pointer;
+        }
+
+        button {
+            display: block;
+            background-color: transparent;
+            border: none;
+            padding: 12px;
+            margin-left: 5px;
+            color: $medium-gray;
+            cursor: pointer;
+            transition: 0.4s ease;
+            font-family: 'Epilogue';
+        }
+
+        button:hover{
+            color: $almost-black;
+        }
+    }
+
+    .top_buttons {
+        margin-top: 20%;
+    }
+
+    .accordion {
+        img {
+            position: relative;
+            left: 20%;
+            margin-top: 5%;
+        }
+    }
+
+    .accordionContent {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s ease;
+        margin-left: 10%;
+    }
+
+    #accordionContentFeatures {
+        button {
+            display: flex;
+            width: 60%;
+
+            img {
+                margin-right: 10%;
+            }
+        }
+    }
+
+    .bottom_buttons {
+        button {
+            width: 100%;
+        }
+
+        :nth-child(2) {
+            border: 2px solid $medium-gray;
+            border-radius: 10px;
+        }
+
+        :nth-child(2):hover {
+            border: 2px solid $almost-black;
+        }
+    }
+
+    .content {
+        display: block;
+    }
+
+    .left-content {
+        position: absolute;
+        top: 65%;
+        padding: 5% 5% 0% 7%;
+
+        button {
+            position: relative;
+            left: 35%;
+        }
+    }
+
+    .right-content {
+        position: absolute;
+        top: 0%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    .left-content {
+        position: absolute;
+        top: 45%;
+    }
+}
